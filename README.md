@@ -7,19 +7,19 @@ To install this package
 go get github.com/mishop/hupxapi 
 
 ## How to use?
-
+```
 import (
-
-
 	"github.com/mishop/hupxapi"
 )
-
+```
 
 Retresive data
+```
 hupxapi.GetHUPX("2006-01-02")
-
+```
 
 ## Full example daily data
+```
 package main
 
 import (
@@ -35,3 +35,4 @@ func main() {
 	data := hupxapi.GetHUPX(currentTime.Format("2006-01-02"))
 	fmt.Println("Baseload price", data["Baseload price"])
 }
+```
