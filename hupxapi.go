@@ -60,14 +60,11 @@ func GetHUPX(t string) map[string]float32 {
 		if len(values) > 0 {
 			value := strings.Replace(values[0], ",", "", -1)
 			val, _ := strconv.ParseFloat(strings.TrimSpace(value), 32)
-			fmt.Printf("Red %d: %f\n", i+1, val)
 			price = append(price, float32(val))
 		} else {
 			fmt.Printf("Red %d: No data found\n", i+1)
 		}
 	})
-	//fmt.Printf("Red \n", price[0])
-	//hupx := make(map[string]float32)
 	hupx := make(map[string]float32)
 	if len(price) > 2 {
 		hupx["Baseload price"] = price[0]
@@ -76,6 +73,5 @@ func GetHUPX(t string) map[string]float32 {
 	} else {
 		fmt.Printf("Red %s: No data found\n", hupx)
 	}
-	//fmt.Println("Hupx \n", hupx)
 	return hupx
 }
