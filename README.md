@@ -3,8 +3,9 @@ Get data from HUPX
 ![Data](hupxdata.png)
 
 To install this package
-
+```
 go get github.com/mishop/hupxapi 
+```
 
 ## How to use?
 ```
