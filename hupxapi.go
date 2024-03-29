@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
-	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -15,7 +14,7 @@ const (
 	baseURL = "https://hupx.hu/en/dam/mc-results/homepage.html?date="
 )
 
-func GetHUPX(t *time.Time) (hupx map[string]float32) {
+func GetHUPX(t string) (hupx map[string]float32) {
 	// download the target HTML document
 	//currentTime := time.Now()
 	client := &http.Client{}
