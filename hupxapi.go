@@ -66,11 +66,11 @@ func GetHUPX(t string) (hupx map[string]float32) {
 			fmt.Printf("Red %d: No data found\n", i+1)
 		}
 	})
-	fmt.Printf("Red \n", price[0])
+	//fmt.Printf("Red \n", price[0])
 	//hupx := make(map[string]float32)
 	hupx["Baseload price"] = price[0]
 	hupx["Peakload price"] = price[1]
 	hupx["Volume"] = price[2]
-	fmt.Println("Hupx \n", hupx)
+	//fmt.Println("Hupx \n", hupx)
 	return hupx
 }
