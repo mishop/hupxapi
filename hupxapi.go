@@ -14,7 +14,7 @@ const (
 	baseURL = "https://hupx.hu/en/dam/mc-results/homepage.html?date="
 )
 
-func GetHUPX(t string) (hupx map[string]float32) {
+func GetHUPX(t string) map[string]float32 {
 	// download the target HTML document
 	//currentTime := time.Now()
 	client := &http.Client{}
@@ -68,6 +68,7 @@ func GetHUPX(t string) (hupx map[string]float32) {
 	})
 	//fmt.Printf("Red \n", price[0])
 	//hupx := make(map[string]float32)
+	hupx := make(map[string]float32)
 	if len(price) > 2 {
 		hupx["Baseload price"] = price[0]
 		hupx["Peakload price"] = price[1]
