@@ -72,6 +72,6 @@ func main() {
 
 	client.Close()
 
-	fmt.Println("Data writed in InfluxDB.")
+	fmt.Println("Data written in InfluxDB")
 }
 ```
